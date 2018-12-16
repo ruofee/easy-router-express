@@ -1,0 +1,33 @@
+{
+  "name": "easy-router-express",
+  "version": "1.0.0",
+  "author": {
+    "name": "ruofee",
+    "email": "ruofee@126.com"
+  },
+  "description": "A Easy Router for Express",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node example/index.js",
+    "build": "babel build -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruofee/easyRouter.git"
+  },
+  "keywords": [
+    "express",
+    "router",
+    "node"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruofee/easyRouter/issues"
+  },
+  "homepage": "https://github.com/ruofee/easyRouter#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.16.4"
+  }
+}
