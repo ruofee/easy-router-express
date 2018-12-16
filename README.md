@@ -51,6 +51,8 @@ const router = new require('express').Router()
 
 ## Example
 
+server.js
+
 ```javascript
 const Express = require('express')
 const EasyRouter = require('easy-router-express')
@@ -69,5 +71,16 @@ EasyRouter(app, router, {
 app.listen(3000, () => {
   console.log('please visit http://localhost:3000')
 })
+```
+
+router/demo.js
+
+```Javascript
+module.exports = (router) => {
+  router.get('/test', (req, res) => {
+    console.log('this is a demo')
+    res.status(200).send('OK')
+  })
+}
 ```
 
