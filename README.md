@@ -1,12 +1,12 @@
-### easy-router-express
+## easy-router-express
 
 **easy-router-express** is writed for building a easy router for express
 
-### Support
+## Support
 
 - Express
 
-### Installation
+## Installation
 
 ```terminal
 npm install easy-router-express
@@ -14,7 +14,7 @@ npm install easy-router-express
 yarn add easy-router-express
 ```
 
-### Getting started
+## Getting started
 
 **Use in Express**
 
@@ -49,7 +49,7 @@ const router = new require('express').Router()
 | methods   | String   | 'POST'                           |
 | Func      | Function | `(req, res, next) => { next() }` |
 
-### Example
+## Example
 
 ```javascript
 const Express = require('express')
