@@ -1,15 +1,15 @@
 {
   "name": "easy-router-express",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": {
     "name": "ruofee",
     "email": "ruofee@126.com"
   },
   "description": "A Easy Router for Express",
-  "main": "lib/index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "node example/index.js",
-    "build": "babel build -d lib"
+    "build": "babel lib -d build"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,8 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "express": "^4.16.4"
+  },
+  "dependencies": {
+    "colors": "^1.3.3"
   }
 }
