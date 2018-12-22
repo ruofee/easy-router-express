@@ -36,17 +36,17 @@ const router = new require('express').Router()
 
 **options**
 
-| Attribute | Description           | Type   | Default                 |
-| --------- | --------------------- | ------ | ----------------------- |
-| Path      | Router Folder 's Path | String | \`${__dirname}/router\` |
-| Prefix    | Router 's Prefix      | String | Null                    |
-| Proxy     | Router 's Proxy       | Object | Null                    |
+| Attribute | Description           | Type         | Default                 |
+| --------- | --------------------- | ------------ | ----------------------- |
+| Path      | Router Folder 's Path | String       | \`${__dirname}/router\` |
+| Prefix    | Router 's Prefix      | String       | Null                    |
+| Proxy     | Router 's Proxy       | Object/Array | Null                    |
 
 **Proxy**
 
 | Attribute | Type     | Example                          |
 | --------- | -------- | -------------------------------- |
-| methods   | String   | 'POST'                           |
+| method    | String   | 'POST'                           |
 | Func      | Function | `(req, res, next) => { next() }` |
 
 ## Example
@@ -63,8 +63,11 @@ const path = __dirname + '/router'
 EasyRouter(app, router, {
   path,
   prefix: '/api',
-  proxy: (req, res, next) => {
-    next()
+  proxy: {
+    method: 'POST',
+    func (req, res, next) {
+      next()
+    }
   }
 })
 
