@@ -24,10 +24,10 @@ module.exports = function (app, router, options) {
     var type = proxy.constructor.name;
     var middleFunc = function middleFunc(proxy) {
       var func = proxy.func,
-          methods = proxy.methods;
+          method = proxy.method;
 
-      var _methods = methods.toLowerCase();
-      router[_methods]('*', func);
+      var _method = method.toLowerCase();
+      router[_method]('*', func);
     };
     if (type === 'Array') {
       var _iteratorNormalCompletion = true;
@@ -79,7 +79,7 @@ module.exports = function (app, router, options) {
             var route = require(_path + '/' + subPath);
             route.apply(undefined, [router].concat(params));
           } catch (err) {
-            console.error(_error('error: ' + path + '/' + subPath + '.js or ' + path + '/' + subPath + '/index.js is not found'));
+            console.error(_error(err));
           }
         }
       }
